@@ -1,0 +1,31 @@
+.featured-title {
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+  color: #3A643B;
+  padding-top: 10px
+}
+
+.featured-subtitle {
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: #4C4C4C;
+  margin: 0 auto;
+}
+
+.logo-container {
+  width: 148px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-image {
+  width: 123px;
+  height: 58px;
+  object-fit: contain;
+}
