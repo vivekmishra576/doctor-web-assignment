@@ -8,6 +8,7 @@ import JoinCircle from './components/JoinCircle';
 import AyurvedDoc from './components/AyurvedDoc';
 import DownloadSection from './components/DownloadSection';
 import ContactSupport from './components/ContactSupport';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <AyurvedDoc />
       <DownloadSection />
       <ContactSupport />
+      <Footer />
     </div>
   );
 }
