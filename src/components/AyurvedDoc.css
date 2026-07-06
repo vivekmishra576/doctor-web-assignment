@@ -12,7 +12,6 @@
   margin: 0 auto;
 }
 
-/* Header Section */
 .section-header {
   text-align: center;
   margin-bottom: 60px;
@@ -42,7 +41,6 @@
   margin: 0;
 }
 
-/* Testimonials Container */
 .testimonials-container {
   display: flex;
   justify-content: center;
@@ -52,7 +50,6 @@
   flex-wrap: nowrap;
 }
 
-/* Testimonial Cards */
 .testimonial-card {
   background: #FFEEC3;
   border-radius: 16px;
@@ -62,20 +59,17 @@
   gap: 16px;
 }
 
-/* Small Card (First and Third) */
 .testimonial-card.small {
   width: 347px;
   height: 190px;
 }
 
-/* Large Card (Second/Middle) */
 .testimonial-card.large {
   width: 480px;
   height: 283px;
   background: #FFEEC3;
 }
 
-/* Doctor Info Section */
 .doctor-info {
   display: flex;
   align-items: center;
@@ -119,7 +113,6 @@
   content: ", ";
 }
 
-/* Rating Stars */
 .rating {
   display: flex;
   gap: 2px;
@@ -141,7 +134,6 @@
   color: #E0E0E0;
 }
 
-/* Testimonial Text */
 .testimonial-text {
   font-family: 'DM Sans';
   font-weight: 400;
@@ -216,7 +208,7 @@
 }
 
 .faq-icon {
-  font-size: 11px;
+  font-size: 20px;
   color: #666666;
   font-weight: 300;
   width: 11px;
@@ -224,6 +216,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   margin-left: 20px;
 }
 
@@ -268,19 +261,8 @@
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.see-more-btn:hover {
-  background: #2a5233;
-  transform: translateY(-2px);
-}
-
-.see-more-btn:active {
-  transform: translateY(0);
-}
-
-/* Responsive Design */
 @media (max-width: 1024px) {
   .testimonials-container {
     flex-direction: column;

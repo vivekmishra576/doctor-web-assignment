@@ -55,7 +55,6 @@
   opacity: 0.9;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .navbar {
     height: auto;

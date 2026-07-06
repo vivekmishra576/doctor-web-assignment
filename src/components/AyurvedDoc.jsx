@@ -82,7 +82,6 @@ const AyurvedDoc = () => {
   return (
     <div className="ayurved-doc-section">
       <div className="ayurved-doc-container">
-        {/* Header Section */}
         <div className="section-header">
           <h2 className="main-title">What other Ayurvedic Doctors are Saying</h2>
           <p className="subtitle">
@@ -90,7 +89,6 @@ const AyurvedDoc = () => {
           </p>
         </div>
 
-        {/* Testimonials Cards */}
         <div className="testimonials-container">
           {testimonials.map((testimonial) => (
             <div 
@@ -118,7 +116,6 @@ const AyurvedDoc = () => {
           ))}
         </div>
 
-        {/* FAQ Section */}
         <div className="faq-section">
           <div className="faq-header">
             <h2 className="faq-title">Frequently Asked Questions</h2>

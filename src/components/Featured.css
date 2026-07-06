@@ -19,7 +19,6 @@
   padding: 0 20px;
 }
 
-/* Logo wrapper with horizontal scroll */
 .logo-wrapper {
   width: 100%;
   position: relative;
@@ -43,7 +42,6 @@
   position: relative;
 }
 
-/* Responsive Design */
 @media (max-width: 1400px) {
   .logo-container {
     width: 130px;
@@ -57,7 +55,6 @@
 }
 
 @media (max-width: 1260px) {
-  /* Add horizontal scroll at 1260px */
   .logo-wrapper {
     overflow-x: auto;
     overflow-y: hidden;
@@ -124,7 +121,6 @@
     margin-bottom: 36px;
   }
 
-  /* Add horizontal scroll on tablet and below */
   .logo-wrapper {
     overflow-x: auto;
     overflow-y: hidden;

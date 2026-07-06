@@ -39,7 +39,6 @@
   padding: 0 20px;
 }
 
-/* First Section - Steps and Background Image */
 .join-circle-first-section {
   display: flex;
   gap: 60px;
@@ -136,13 +135,11 @@
   margin-top: 20px;
 }
 
-/* Second Section - Tab Buttons and Phone Images */
 .join-circle-second-section {
   max-width: 1300px;
   margin: 0 auto;
 }
 
-/* Tab Buttons Section */
 .tab-buttons {
   display: flex;
   justify-content: center;
@@ -185,7 +182,6 @@
   width: auto;
 }
 
-/* Content Section */
 .join-circle-content {
   display: flex;
   align-items: flex-start;
@@ -251,7 +247,6 @@
   text-align: center;
 }
 
-/* Join Now Button Section */
 .join-now-section {
   display: flex;
   justify-content: center;
@@ -279,8 +274,6 @@
   cursor: pointer;
 }
 
-
-/* Tablet and below */
 @media (max-width: 1200px) {
   .join-circle-first-section {
     flex-direction: column;
@@ -315,7 +308,6 @@
   }
 }
 
-/* Large Mobile and below */
 @media (max-width: 768px) {
   .join-circle {
     padding: 40px 15px;
@@ -387,7 +379,6 @@
   }
 }
 
-/* Small Mobile */
 @media (max-width: 480px) {
   .join-circle {
     padding: 30px 10px;
@@ -444,7 +435,6 @@
   }
 }
 
-/* Extra Small Mobile */
 @media (max-width: 360px) {
   .join-circle {
     padding: 20px 8px;
