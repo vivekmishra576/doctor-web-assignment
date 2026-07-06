@@ -24,23 +24,25 @@ const Featured = () => {
 
   return (
     <section className="w-full bg-[#FFF8E6]">
-      <div className="max-w-[1440px] mx-auto">
+      <div className="max-w-[1440px] mx-auto px-5 py-10">
         <h2 className="featured-title">
           Featured
         </h2>
-        <p className="featured-subtitle mb-12">
+        <p className="featured-subtitle">
           Recognized and celebrated by leading publications – Amrutam in the spotlight!
         </p>
-        <div className="flex items-center justify-center gap-3 mx-auto">
-          {logos.map((logo, index) => (
-            <div key={index} className="logo-container">
-              <img 
-                src={logo.src} 
-                alt={logo.alt}
-                className="logo-image"
-              />
-            </div>
-          ))}
+        <div className="logo-wrapper">
+          <div className="flex items-center justify-start gap-3 min-w-max px-5">
+            {logos.map((logo, index) => (
+              <div key={index} className="logo-container">
+                <img 
+                  src={logo.src} 
+                  alt={logo.alt}
+                  className="logo-image"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

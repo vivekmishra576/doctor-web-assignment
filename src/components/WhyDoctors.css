@@ -1,7 +1,7 @@
 .whydoctors-section {
   width: 100%;
   background-color: #FFF8E6;
-  padding: 80px 20px 100px 20px;
+  padding: 30px 20px 30px 20px;
 }
 
 .whydoctors-container {
@@ -34,38 +34,52 @@
   line-height: 1.5;
 }
 
-/* Features Wrapper */
+/* Features Wrapper - Grid Layout for Column Alignment */
 .features-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70psx 120px;
+  align-items: start;
+}
+
+/* Feature Card - Each card takes full row with 2 columns */
+.feature-card {
+  display: contents;
+}
+
+/* Text Content - Fixed width column */
+.feature-content {
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  justify-content: flex-start;
+  padding: 20px 0;
 }
 
-/* Feature Card */
-.feature-card {
+/* Image Content - Fixed width column */
+.feature-mockup {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 120px;
+  align-items: flex-start;
+  justify-content: center;
   position: relative;
-  min-height: 400px;
-  padding: 40px 0;
+  padding: 20px 0;
 }
 
-.feature-card-left {
-  flex-direction: row;
+/* Left Layout: Image LEFT (col 1), Text RIGHT (col 2) */
+.feature-card-left .feature-mockup {
+  grid-column: 1;
 }
 
-.feature-card-right {
-  flex-direction: row;
+.feature-card-left .feature-content {
+  grid-column: 2;
 }
 
-/* Feature Content */
-.feature-content {
-  flex: 1;
-  max-width: 450px;
-  position: relative;
-  z-index: 2;
+/* Right Layout: Text LEFT (col 1), Image RIGHT (col 2) */
+.feature-card-right .feature-content {
+  grid-column: 1;
+}
+
+.feature-card-right .feature-mockup {
+  grid-column: 2;
 }
 
 .feature-title {
@@ -90,18 +104,6 @@
   font-size: 18px;
   color: #312E2E;
   line-height: 1.7;
-  max-width: 420px;
-}
-
-/* Feature Mockup - Just image, no extra blobs */
-.feature-mockup {
-  flex: 1;
-  max-width: 600px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 350px;
 }
 
 /* Mockup image wrapper - relative position for icon positioning */
@@ -141,13 +143,13 @@
   z-index: 3;
 }
 
-/* For left layout (text left, image right), icon on top-right of image */
+/* For left layout (image left), icon on top-right of image */
 .feature-card-left .feature-icon-absolute {
   top: 5%;
   right: 10%;
 }
 
-/* For right layout (image left, text right), icon on top-left of image */
+/* For right layout (image right), icon on top-left of image */
 .feature-card-right .feature-icon-absolute {
   top: 5%;
   left: 10%;
@@ -161,21 +163,33 @@
   height: 70px;
 }
 
-/* Icon positioning for specific cards */
+/* Call card - icon positioning */
+.feature-card-call .feature-icon-absolute {
+  top: 8%;
+  left: 12%;
+}
+
 /* Session card - icon on right side middle */
 .feature-card-session .icon-with-container {
-  top: 30%;
-  right: -8%;
+  top: 12%;
+  right: 20%;
   width: 90px;
   height: 90px;
 }
 
 /* Timing card - icon on top right */
 .feature-card-timing .icon-with-container {
-  top: 8%;
-  right: -5%;
+  top: 0%;
+  right: 17%;
   width: 80px;
   height: 80px;
+}
+
+/* Timing card - secondary image positioning */
+.feature-card-timing .mockup-image-secondary {
+  bottom: -7%;
+  right: -8%;
+  width: 50%;
 }
 
 .icon-container-bg {
@@ -199,7 +213,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .whydoctors-container {
     padding: 0 40px;
   }
@@ -211,29 +225,10 @@
 
   .whydoctors-subtitle {
     font-size: 18px;
-    margin-bottom: 80px;
   }
 
   .features-wrapper {
-    gap: 100px;
-  }
-
-  .feature-card {
-    gap: 60px;
-    min-height: 350px;
-  }
-
-  .feature-content {
-    max-width: 400px;
-  }
-
-  .feature-title {
-    font-size: 24px;
-  }
-
-  .feature-description {
-    font-size: 16px;
-    max-width: 380px;
+    gap: 50px 80px;
   }
 
   .mockup-image-wrapper {
@@ -246,14 +241,22 @@
     height: 262px;
   }
 
+  .feature-title {
+    font-size: 24px;
+  }
+
+  .feature-description {
+    font-size: 16px;
+  }
+
   .feature-icon-absolute {
     width: 60px;
     height: 60px;
   }
 
   .icon-with-container {
-    width: 70px;
-    height: 70px;
+    width: 75px;
+    height: 75px;
   }
 
   .icon-in-container {
@@ -261,59 +264,76 @@
     height: 35px;
   }
 
-  /* Session card tablet */
+  /* Call card */
+  .feature-card-call .feature-icon-absolute {
+    top: 8%;
+    left: 12%;
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Session card */
   .feature-card-session .icon-with-container {
-    top: 25%;
-    right: -6%;
+    top: 12%;
+    right: 20%;
+    width: 75px;
+    height: 75px;
+  }
+
+  /* Timing card */
+  .feature-card-timing .icon-with-container {
+    top: 0%;
+    right: 17%;
     width: 70px;
     height: 70px;
   }
 
-  /* Timing card tablet */
-  .feature-card-timing .icon-with-container {
-    top: 8%;
-    right: -4%;
-    width: 65px;
-    height: 65px;
+  .mockup-image-secondary {
+    width: 50%;
+    bottom: -7%;
+    right: -8%;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .whydoctors-section {
     padding: 60px 20px 80px 20px;
   }
 
   .whydoctors-container {
-    padding: 0 20px;
+    padding: 0 30px;
   }
 
   .whydoctors-title {
-    font-size: 28px;
-    line-height: 38px;
-    margin-bottom: 12px;
+    font-size: 32px;
+    line-height: 42px;
   }
 
   .whydoctors-subtitle {
-    font-size: 16px;
-    margin-bottom: 60px;
+    font-size: 17px;
+    margin-bottom: 70px;
   }
 
   .features-wrapper {
-    gap: 80px;
+    gap: 50px 60px;
   }
 
-  .feature-card,
-  .feature-card-left,
-  .feature-card-right {
-    flex-direction: column !important;
-    gap: 40px;
-    min-height: auto;
-    padding: 20px 0;
+  .mockup-image-wrapper {
+    width: 400px;
+    height: 233px;
+  }
+
+  .mockup-image {
+    width: 400px;
+    height: 233px;
   }
 
   .feature-content {
-    max-width: 100%;
-    text-align: center;
+    padding: 15px 0;
+  }
+
+  .feature-mockup {
+    padding: 15px 0;
   }
 
   .feature-title {
@@ -323,98 +343,115 @@
 
   .feature-description {
     font-size: 15px;
-    max-width: 100%;
-  }
-
-  .feature-mockup {
-    max-width: 100%;
-    min-height: auto;
-  }
-
-  .mockup-image-wrapper {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    margin: 0 auto;
-  }
-
-  .mockup-image {
-    width: 100%;
-    height: auto;
   }
 
   .feature-icon-absolute {
-    width: 50px;
-    height: 50px;
-    top: -5%;
-    right: 5%;
-  }
-
-  .feature-card-right .feature-icon-absolute {
-    left: auto;
-    right: 5%;
+    width: 55px;
+    height: 55px;
   }
 
   .icon-with-container {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
   }
 
   .icon-in-container {
-    width: 30px;
-    height: 30px;
+    width: 33px;
+    height: 33px;
   }
 
-  /* Session card mobile - top right of image */
+  /* Call card tablet */
+  .feature-card-call .feature-icon-absolute {
+    top: 8%;
+    left: 12%;
+    width: 55px;
+    height: 55px;
+  }
+
+  /* Session card tablet */
   .feature-card-session .icon-with-container {
-    top: -5%;
-    right: 5%;
+    top: 12%;
+    right: 20%;
+    width: 70px;
+    height: 70px;
   }
 
-  /* Timing card mobile - top right of image */
+  /* Timing card tablet */
   .feature-card-timing .icon-with-container {
-    top: -5%;
-    right: 5%;
-  }
-
-  .mockup-image-secondary {
-    width: 45%;
-    bottom: 5%;
-    right: -3%;
+    top: 0%;
+    right: 17%;
+    width: 65px;
+    height: 65px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 920px) {
   .whydoctors-section {
-    padding: 40px 16px 60px 16px;
+    padding: 50px 16px 70px 16px;
   }
 
   .whydoctors-container {
-    padding: 0 16px;
+    padding: 0 20px;
   }
 
   .whydoctors-title {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 12px;
   }
 
   .whydoctors-subtitle {
-    font-size: 14px;
+    font-size: 15px;
     margin-bottom: 50px;
   }
 
+  /* Switch to single column at 920px */
   .features-wrapper {
-    gap: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
   }
 
   .feature-card {
-    gap: 30px;
-    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .feature-card-left,
+  .feature-card-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-mockup {
+    order: 1;
+    padding: 0;
+  }
+
+  .feature-content {
+    order: 2;
+    text-align: center;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  /* Scale images down to 350px */
+  .mockup-image-wrapper {
+    width: 350px;
+    height: 204px;
+  }
+
+  .mockup-image {
+    width: 350px;
+    height: 204px;
   }
 
   .feature-title {
     font-size: 20px;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
 
   .feature-description {
@@ -422,8 +459,218 @@
     line-height: 1.6;
   }
 
+  .feature-icon-absolute {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon-with-container {
+    width: 65px;
+    height: 65px;
+  }
+
+  .icon-in-container {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Call card mobile */
+  .feature-card-call .feature-icon-absolute {
+    top: 8%;
+    left: 12%;
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Session card mobile */
+  .feature-card-session .icon-with-container {
+    top: 12%;
+    right: 20%;
+    width: 65px;
+    height: 65px;
+  }
+
+  /* Timing card mobile */
+  .feature-card-timing .icon-with-container {
+    top: 0%;
+    right: 17%;
+    width: 60px;
+    height: 60px;
+  }
+
+  .mockup-image-secondary {
+    width: 50%;
+    bottom: -7%;
+    right: -8%;
+  }
+}
+
+@media (max-width: 768px) {
+  .whydoctors-section {
+    padding: 50px 16px 70px 16px;
+  }
+
+  .whydoctors-container {
+    padding: 0 20px;
+  }
+
+  .whydoctors-title {
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 12px;
+  }
+
+  .whydoctors-subtitle {
+    font-size: 14px;
+    margin-bottom: 50px;
+  }
+
+  /* Switch to single column on mobile */
+  .features-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .feature-card {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .feature-card-left,
+  .feature-card-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-mockup {
+    order: 1;
+    padding: 0;
+  }
+
+  .feature-content {
+    order: 2;
+    text-align: center;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  /* Scale images down to 300px */
   .mockup-image-wrapper {
-    max-width: 320px;
+    width: 300px;
+    height: 175px;
+  }
+
+  .mockup-image {
+    width: 300px;
+    height: 175px;
+  }
+
+  .feature-title {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+
+  .feature-description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .feature-icon-absolute {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon-with-container {
+    width: 65px;
+    height: 65px;
+  }
+
+  .icon-in-container {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Call card mobile */
+  .feature-card-call .feature-icon-absolute {
+    top: 8%;
+    left: 12%;
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Session card mobile */
+  .feature-card-session .icon-with-container {
+    top: 12%;
+    right: 20%;
+    width: 65px;
+    height: 65px;
+  }
+
+  /* Timing card mobile */
+  .feature-card-timing .icon-with-container {
+    top: 0%;
+    right: 17%;
+    width: 60px;
+    height: 60px;
+  }
+
+  .mockup-image-secondary {
+    width: 50%;
+    bottom: -7%;
+    right: -8%;
+  }
+}
+
+@media (max-width: 480px) {
+  .whydoctors-section {
+    padding: 40px 12px 60px 12px;
+  }
+
+  .whydoctors-container {
+    padding: 0 16px;
+  }
+
+  .whydoctors-title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .whydoctors-subtitle {
+    font-size: 13px;
+    margin-bottom: 40px;
+  }
+
+  .features-wrapper {
+    gap: 40px;
+  }
+
+  .feature-card {
+    gap: 20px;
+  }
+
+  /* Scale images down to 300px */
+  .mockup-image-wrapper {
+    width: 300px;
+    height: 175px;
+  }
+
+  .mockup-image {
+    width: 300px;
+    height: 175px;
+  }
+
+  .feature-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .feature-description {
+    font-size: 13px;
+    line-height: 1.5;
   }
 
   .feature-icon-absolute {
@@ -432,60 +679,42 @@
   }
 
   .icon-with-container {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
   }
 
   .icon-in-container {
-    width: 25px;
-    height: 25px;
+    width: 26px;
+    height: 26px;
+  }
+
+  /* Call card small mobile */
+  .feature-card-call .feature-icon-absolute {
+    top: 8%;
+    left: 12%;
+    width: 45px;
+    height: 45px;
   }
 
   /* Session card small mobile */
   .feature-card-session .icon-with-container {
-    top: -4%;
-    right: 3%;
-    width: 50px;
-    height: 50px;
+    top: 12%;
+    right: 20%;
+    width: 55px;
+    height: 55px;
   }
 
   /* Timing card small mobile */
   .feature-card-timing .icon-with-container {
-    top: -4%;
-    right: 3%;
+    top: 0%;
+    right: 17%;
     width: 50px;
     height: 50px;
   }
 
   .mockup-image-secondary {
-    width: 40%;
-    bottom: 3%;
-    right: -2%;
+    width: 50%;
+    bottom: -7%;
+    right: -8%;
   }
-}
-
-/* Specific icon positioning for each card */
-/* Call card - icon positioning */
-.feature-card-call .icon-call {
-  top: 8%;
-  left: 12%;
-}
-
-/* Session card - icon container positioning */
-.feature-card-session .icon-session {
-  top: 12%;
-  right: 20%;
-}
-
-/* Timing card - icon container positioning */
-.feature-card-timing .icon-timing {
-  top: 0%;
-  right: 17%;
-}
-
-/* Timing card - secondary image positioning */
-.feature-card-timing .secondary-timing {
-  bottom: -7%;
-  right: -8%;
-  width: 50%;
 }
