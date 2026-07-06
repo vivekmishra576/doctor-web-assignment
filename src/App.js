@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Featured from './components/Featured';
 import WhyDoctors from './components/WhyDoctors';
 import JoinCircle from './components/JoinCircle';
+import AyurvedDoc from './components/AyurvedDoc';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Featured />
       <WhyDoctors />
       <JoinCircle />
+      <AyurvedDoc />
     </div>
   );
 }

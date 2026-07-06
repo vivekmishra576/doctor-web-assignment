@@ -1,0 +1,427 @@
+.ayurved-doc-section {
+  width: 100%;
+  background: #FFF7E2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ayurved-doc-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.main-title {
+  width: 808px;
+  max-width: 100%;
+  height: 52px;
+  color: #33643F;
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
+  text-align: center;
+  margin: 0 auto 0px;
+  line-height: 52px;
+}
+
+.subtitle {
+  color: #4C4C4C;
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+/* Testimonials Container */
+.testimonials-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 60px;
+  flex-wrap: nowrap;
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+  background: #FFEEC3;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Small Card (First and Third) */
+.testimonial-card.small {
+  width: 347px;
+  height: 190px;
+}
+
+/* Large Card (Second/Middle) */
+.testimonial-card.large {
+  width: 480px;
+  height: 283px;
+  background: #FFEEC3;
+}
+
+/* Doctor Info Section */
+.doctor-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.doctor-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.doctor-details {
+  flex: 1;
+}
+
+.doctor-name {
+  font-family: 'DM Sans';
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  color: #333333;
+  text-align: left;
+  margin: 0;
+  display: inline;
+}
+
+.doctor-credentials {
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #666666;
+  text-align: left;
+  margin: 0;
+  display: inline;
+}
+
+.doctor-credentials::before {
+  content: ", ";
+}
+
+/* Rating Stars */
+.rating {
+  display: flex;
+  gap: 2px;
+  margin-top: 4px;
+}
+
+.star {
+  width: 17px;
+  height: 17px;
+  font-size: 17px;
+  line-height: 17px;
+}
+
+.star.filled {
+  color: #FFC107;
+}
+
+.star.empty {
+  color: #E0E0E0;
+}
+
+/* Testimonial Text */
+.testimonial-text {
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-style: normal;
+  color: #7E7E7E;
+  text-align: left;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.testimonial-card.small .testimonial-text {
+  font-size: 12px;
+}
+
+.testimonial-card.large .testimonial-text {
+  font-size: 16px;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.faq-title {
+  color: #33643F;
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  margin: 0 auto 8px;
+  text-align: center;
+}
+
+.faq-subtitle {
+  color: #4C4C4C;
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.faq-list {
+  max-width: 1033px;
+  margin: 0 auto 40px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #C6C1B9;
+  padding: 14px 0;
+}
+
+.faq-question-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+
+.faq-question {
+  color: #666666;
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.faq-icon {
+  font-size: 11px;
+  color: #666666;
+  font-weight: 300;
+  width: 11px;
+  height: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.faq-icon.open {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  color: #7E7E7E;
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 16px;
+  padding-right: 40px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.see-more-btn {
+  display: block;
+  margin: 0 auto;
+  background: #3A643B;
+  color: #FFFFFF;
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  width: 163px;
+  height: 56px;
+  padding: 12px 36px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.see-more-btn:hover {
+  background: #2a5233;
+  transform: translateY(-2px);
+}
+
+.see-more-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .testimonials-container {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .testimonial-card.small,
+  .testimonial-card.large {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+  }
+
+  .main-title {
+    width: 100%;
+    font-size: 32px;
+    height: auto;
+  }
+
+  .faq-title {
+    font-size: 32px;
+  }
+
+  .faq-subtitle {
+    font-size: 18px;
+  }
+
+  .faq-list {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .ayurved-doc-section {
+    padding: 60px 15px;
+  }
+
+  .main-title {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .testimonials-container {
+    gap: 16px;
+  }
+
+  .testimonial-card {
+    padding: 20px;
+  }
+
+  .testimonial-card.small,
+  .testimonial-card.large {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .doctor-image {
+    width: 45px;
+    height: 45px;
+  }
+
+  .faq-title {
+    font-size: 28px;
+  }
+
+  .faq-subtitle {
+    font-size: 16px;
+  }
+
+  .faq-question {
+    font-size: 16px;
+  }
+
+  .faq-answer {
+    font-size: 14px;
+    padding-right: 20px;
+  }
+
+  .faq-icon {
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+  }
+
+  .see-more-btn {
+    width: 140px;
+    height: 48px;
+    font-size: 18px;
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ayurved-doc-section {
+    padding: 40px 10px;
+  }
+
+  .main-title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .testimonial-card {
+    padding: 16px;
+  }
+
+  .testimonial-card.small .testimonial-text,
+  .testimonial-card.large .testimonial-text {
+    font-size: 12px;
+  }
+
+  .faq-title {
+    font-size: 24px;
+  }
+
+  .faq-subtitle {
+    font-size: 14px;
+  }
+
+  .faq-question {
+    font-size: 14px;
+  }
+
+  .faq-icon {
+    width: 9px;
+    height: 9px;
+    font-size: 9px;
+  }
+
+  .see-more-btn {
+    width: 130px;
+    height: 44px;
+    padding: 8px 24px;
+    font-size: 16px;
+  }
+}
