@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700;800&display=swap');
+
+.hero {
+  background: linear-gradient(to right, #FFE6A5 0%, #FFF9E8 50%, #FFF6DD 100%);
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 587px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.hero-container {
+  max-width: 1275px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-content {
+  max-width: 715px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.welcome-text {
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #666666;
+  margin: 0;
+}
+
+.main-heading {
+  font-family: 'DM Sans';
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 100%;
+  color: #000000;
+  margin: 0;
+}
+
+.text-green {
+  color: #3A643C;
+}
+
+.description {
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  color: #666666;
+  max-width: 502px;
+  margin: 0;
+}
+
+.join-button {
+  width: 262px;
+  height: 56px;
+  padding: 20px 56px;
+  border-radius: 12px;
+  background-color: #3A643C;
+  border: none;
+  cursor: pointer;
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  text-align: center;
+  color: #FFFFFF;
+  transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+  background-color: #2d4f2e;
+}
+
+.stats-divider {
+  width: 1.42px;
+  height: 43px;
+  background: #83A78580;
+  border-radius: 30px;
+  align-self: center;
+}
+
+.stats-container {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  align-items: center;
+  width: 251px;
+  height: 71px
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-number {
+  font-family: 'DM Sans';
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  text-align: center;
+  color: #000000;
+  margin: 0;
+}
+
+.stat-label {
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  text-align: center;
+  color: #4C4C4C;
+  margin: 0;
+}
+
+.hero-image {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.doctor-main {
+  position: relative !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  z-index: 1 !important;
+}
+
+.icon-first {
+  position: absolute !important;
+  width: 98px !important;
+  height: 99px !important;
+  bottom: 0% !important;
+  left: 0px !important;
+  z-index: 2 !important;
+}
+
+.icon-second {
+  position: absolute !important;
+  width: 98px !important;
+  height: 99px !important;
+  top: 8% !important;
+  right: -47px !important;
+  z-index: 2 !important;
+}
+
+.icon-third {
+  position: absolute !important;
+  width: 98px !important;
+  height: 99px !important;
+  bottom: 5% !important;
+  right: 0px !important;
+  z-index: 2 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .description br {
+    display: none;
+  }
+
+  .stats-container {
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: 400px;
+    height: 332px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
+  .main-heading {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .join-button {
+    width: 220px;
+    height: 50px;
+    padding: 16px 40px;
+    font-size: 18px;
+  }
+
+  .hero-image img {
+    width: 350px;
+    height: 291px;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 30px 15px;
+  }
+
+  .main-heading {
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  .welcome-text {
+    font-size: 14px;
+  }
+
+  .join-button {
+    width: 200px;
+    height: 48px;
+    padding: 14px 32px;
+    font-size: 16px;
+  }
+
+  .hero-image img {
+    width: 280px;
+    height: 233px;
+  }
+
+  .stat-number {
+    font-size: 20px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+  }
+}
