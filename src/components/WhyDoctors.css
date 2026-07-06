@@ -57,7 +57,7 @@
 }
 
 .feature-card-right {
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 /* Feature Content */
@@ -70,23 +70,25 @@
 
 .feature-title {
   font-family: 'DM Sans', sans-serif;
-  font-weight: 700;
-  font-size: 32px;
-  color: #3A643B;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 28px;
+  color: #3A643C;
   margin-bottom: 20px;
   line-height: 1.3;
 }
 
 .feature-highlight {
-  color: #3A643B;
-  font-weight: 700;
+  color: #3A643C;
+  font-weight: 500;
 }
 
 .feature-description {
   font-family: 'DM Sans', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  color: #4C4C4C;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  color: #312E2E;
   line-height: 1.7;
   max-width: 420px;
 }
@@ -105,16 +107,16 @@
 /* Mockup image wrapper - relative position for icon positioning */
 .mockup-image-wrapper {
   position: relative;
-  width: 100%;
-  max-width: 550px;
+  width: 551px;
+  height: 321.44px;
 }
 
 /* Mockup image - no blob, image already has it */
 .mockup-image {
   position: relative;
   z-index: 2;
-  width: 100%;
-  height: auto;
+  width: 551px;
+  height: 321.44px;
   object-fit: contain;
   display: block;
 }
@@ -159,16 +161,21 @@
   height: 70px;
 }
 
-/* For left layout (text left, image right), icon container on top-left of white card */
-.feature-card-left .icon-with-container {
-  top: 5%;
-  left: 20%;
+/* Icon positioning for specific cards */
+/* Session card - icon on right side middle */
+.feature-card-session .icon-with-container {
+  top: 30%;
+  right: -8%;
+  width: 90px;
+  height: 90px;
 }
 
-/* For right layout (image left, text right), icon container on top-left of white card */
-.feature-card-right .icon-with-container {
-  top: 20%;
-  right: 18%;
+/* Timing card - icon on top right */
+.feature-card-timing .icon-with-container {
+  top: 8%;
+  right: -5%;
+  width: 80px;
+  height: 80px;
 }
 
 .icon-container-bg {
@@ -199,6 +206,7 @@
 
   .whydoctors-title {
     font-size: 36px;
+    line-height: 46px;
   }
 
   .whydoctors-subtitle {
@@ -220,20 +228,53 @@
   }
 
   .feature-title {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .feature-description {
-    font-size: 15px;
+    font-size: 16px;
+    max-width: 380px;
   }
 
-  .mockup-background-circle {
-    width: 350px;
-    height: 350px;
+  .mockup-image-wrapper {
+    width: 450px;
+    height: 262px;
   }
 
   .mockup-image {
-    max-width: 450px;
+    width: 450px;
+    height: 262px;
+  }
+
+  .feature-icon-absolute {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon-with-container {
+    width: 70px;
+    height: 70px;
+  }
+
+  .icon-in-container {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* Session card tablet */
+  .feature-card-session .icon-with-container {
+    top: 25%;
+    right: -6%;
+    width: 70px;
+    height: 70px;
+  }
+
+  /* Timing card tablet */
+  .feature-card-timing .icon-with-container {
+    top: 8%;
+    right: -4%;
+    width: 65px;
+    height: 65px;
   }
 }
 
@@ -247,7 +288,8 @@
   }
 
   .whydoctors-title {
-    font-size: 32px;
+    font-size: 28px;
+    line-height: 38px;
     margin-bottom: 12px;
   }
 
@@ -266,37 +308,79 @@
     flex-direction: column !important;
     gap: 40px;
     min-height: auto;
+    padding: 20px 0;
   }
 
   .feature-content {
     max-width: 100%;
+    text-align: center;
   }
 
-  .feature-icon-wrapper {
-    margin-bottom: 24px;
+  .feature-title {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .feature-description {
+    font-size: 15px;
+    max-width: 100%;
   }
 
   .feature-mockup {
     max-width: 100%;
-    min-height: 300px;
+    min-height: auto;
   }
 
-  .mockup-background-circle {
-    width: 300px;
-    height: 300px;
+  .mockup-image-wrapper {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
   }
 
   .mockup-image {
-    max-width: 400px;
+    width: 100%;
+    height: auto;
   }
 
-  .feature-title {
-    font-size: 24px;
+  .feature-icon-absolute {
+    width: 50px;
+    height: 50px;
+    top: -5%;
+    right: 5%;
   }
 
-  .feature-description {
-    font-size: 14px;
-    max-width: 100%;
+  .feature-card-right .feature-icon-absolute {
+    left: auto;
+    right: 5%;
+  }
+
+  .icon-with-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon-in-container {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Session card mobile - top right of image */
+  .feature-card-session .icon-with-container {
+    top: -5%;
+    right: 5%;
+  }
+
+  /* Timing card mobile - top right of image */
+  .feature-card-timing .icon-with-container {
+    top: -5%;
+    right: 5%;
+  }
+
+  .mockup-image-secondary {
+    width: 45%;
+    bottom: 5%;
+    right: -3%;
   }
 }
 
@@ -310,7 +394,8 @@
   }
 
   .whydoctors-title {
-    font-size: 28px;
+    font-size: 24px;
+    line-height: 32px;
   }
 
   .whydoctors-subtitle {
@@ -322,32 +407,60 @@
     gap: 60px;
   }
 
-  .feature-icon-wrapper {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 20px;
-  }
-
-  .feature-icon {
-    width: 30px;
-    height: 30px;
+  .feature-card {
+    gap: 30px;
+    padding: 16px 0;
   }
 
   .feature-title {
     font-size: 20px;
+    margin-bottom: 12px;
   }
 
   .feature-description {
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 1.6;
   }
 
-  .mockup-background-circle {
-    width: 250px;
-    height: 250px;
-  }
-
-  .mockup-image {
+  .mockup-image-wrapper {
     max-width: 320px;
+  }
+
+  .feature-icon-absolute {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon-with-container {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon-in-container {
+    width: 25px;
+    height: 25px;
+  }
+
+  /* Session card small mobile */
+  .feature-card-session .icon-with-container {
+    top: -4%;
+    right: 3%;
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Timing card small mobile */
+  .feature-card-timing .icon-with-container {
+    top: -4%;
+    right: 3%;
+    width: 50px;
+    height: 50px;
+  }
+
+  .mockup-image-secondary {
+    width: 40%;
+    bottom: 3%;
+    right: -2%;
   }
 }
 
@@ -360,19 +473,19 @@
 
 /* Session card - icon container positioning */
 .feature-card-session .icon-session {
-  top: 5%;
-  left: 20%;
+  top: 12%;
+  right: 20%;
 }
 
 /* Timing card - icon container positioning */
 .feature-card-timing .icon-timing {
-  top: 8%;
-  left: 15%;
+  top: 0%;
+  right: 17%;
 }
 
 /* Timing card - secondary image positioning */
 .feature-card-timing .secondary-timing {
-  bottom: 10%;
-  right: -5%;
+  bottom: -7%;
+  right: -8%;
   width: 50%;
 }

@@ -45,33 +45,33 @@ const FeatureCard = ({ icon, title, description, mockupImage, mockupImage2, layo
   return (
     <div className={`feature-card feature-card-${cardId} ${isLeft ? 'feature-card-left' : 'feature-card-right'}`}>
       {isLeft ? (
-        // LEFT: Text left, Image right
+        // LEFT: Image left, Text right
         <>
-          <div className="feature-content">
-            <h3 className="feature-title">{renderTitle()}</h3>
-            <p className="feature-description">{description}</p>
-          </div>
           <div className="feature-mockup">
             <div className="mockup-image-wrapper">
               {renderIcon()}
               <img src={mockupImage} alt={title} className="mockup-image" />
               {mockupImage2 && <img src={mockupImage2} alt={`${title} 2`} className={`mockup-image-secondary secondary-${cardId}`} />}
             </div>
+          </div>
+          <div className="feature-content">
+            <h3 className="feature-title">{renderTitle()}</h3>
+            <p className="feature-description">{description}</p>
           </div>
         </>
       ) : (
-        // RIGHT: Image left, Text right
+        // RIGHT: Text left, Image right
         <>
+          <div className="feature-content">
+            <h3 className="feature-title">{renderTitle()}</h3>
+            <p className="feature-description">{description}</p>
+          </div>
           <div className="feature-mockup">
             <div className="mockup-image-wrapper">
               {renderIcon()}
               <img src={mockupImage} alt={title} className="mockup-image" />
               {mockupImage2 && <img src={mockupImage2} alt={`${title} 2`} className={`mockup-image-secondary secondary-${cardId}`} />}
             </div>
-          </div>
-          <div className="feature-content">
-            <h3 className="feature-title">{renderTitle()}</h3>
-            <p className="feature-description">{description}</p>
           </div>
         </>
       )}
@@ -88,7 +88,7 @@ const WhyDoctors = () => {
       highlightText: "FREE",
       description: "We understand the importance of building trust with your patients. That's why Amrutam offers a free 5-minute call helping you connect instantly and foster lasting patient relationships with ease.",
       mockupImage: fivemincallimage,
-      layout: 'right'
+      layout: 'left'
     },
     {
       cardId: 'forum',
@@ -97,7 +97,7 @@ const WhyDoctors = () => {
       highlightText: "",
       description: "We value your journey in Ayurveda. The Amrutam Forum helps you engage with patients, answer questions, while the 'Thoughts' section allows you to share deeper Ayurvedic wisdom.",
       mockupImage: meaningfulconnection,
-      layout: 'left',
+      layout: 'right',
       showIcon: false 
     },
     {
@@ -107,7 +107,7 @@ const WhyDoctors = () => {
       highlightText: "",
       description: "Amrutam offers you to connect with patients via Instant Chat, Instant Call, or Schedule Video call. Each option offers flexibility and personalized care to suit individual needs.",
       mockupImage: sessionmodegrup,
-      layout: 'right',
+      layout: 'left',
       useIconContainer: true,
       iconContainer: iconcontaines
     },
@@ -118,7 +118,7 @@ const WhyDoctors = () => {
       highlightText: "",
       description: "We understand the need for seamless transactions. With Amrutam Wallet, you can easily withdraw payments, and for your security, a one-time password is sent to your registered mobile number during withdrawals.",
       mockupImage: walletgrup,
-      layout: 'left',
+      layout: 'right',
       showIcon: false  // Icon already in image
     },
     {
@@ -129,7 +129,7 @@ const WhyDoctors = () => {
       description: "We recognize the importance of managing your time. With the availability toggle in the doctor's app, you control when patients can book consultations, ensuring a balanced and stress-free practice.",
       mockupImage: worktimiggruphalf,
       mockupImage2: worktimimghalf2,
-      layout: 'right',
+      layout: 'left',
       useIconContainer: true,
       iconContainer: iconcontaines
     }
