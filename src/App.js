@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Featured from './components/Featured';
+import WhyDoctors from './components/WhyDoctors';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Hero />
       <Featured />
+      <WhyDoctors />
     </div>
   );
 }
