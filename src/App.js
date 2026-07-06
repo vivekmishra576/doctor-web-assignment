@@ -6,6 +6,7 @@ import Featured from './components/Featured';
 import WhyDoctors from './components/WhyDoctors';
 import JoinCircle from './components/JoinCircle';
 import AyurvedDoc from './components/AyurvedDoc';
+import DownloadSection from './components/DownloadSection';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <WhyDoctors />
       <JoinCircle />
       <AyurvedDoc />
+      <DownloadSection />
     </div>
   );
 }
